@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CPP_Player.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -329,18 +329,18 @@ FVector ACPP_Player::CheckTargetAtCamera()
 	FVector CameraLoc = Camera->GetComponentLocation();
 	FVector CameraForward = Camera->GetForwardVector();
 
-	FVector StartLoc = CameraLoc; // ·¹ÀÌÀú ½ÃÀÛ ÁöÁ¡.
-	FVector EndLoc = CameraLoc + (CameraForward * 5000.0f); // ·¹ÀÌÀú ³¡³ª´Â ÁöÁ¡.
+	FVector StartLoc = CameraLoc; // ë ˆì´ì € ì‹œì‘ ì§€ì .
+	FVector EndLoc = CameraLoc + (CameraForward * 5000.0f); // ë ˆì´ì € ëë‚˜ëŠ” ì§€ì .
 
-	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes; // È÷Æ® °¡´ÉÇÑ ¿ÀºêÁ§Æ® À¯Çüµé.
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes; // íˆíŠ¸ ê°€ëŠ¥í•œ ì˜¤ë¸Œì íŠ¸ ìœ í˜•ë“¤.
 	TEnumAsByte<EObjectTypeQuery> WorldStatic = UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_WorldStatic);
 	TEnumAsByte<EObjectTypeQuery> WorldDynamic = UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_WorldDynamic);
 	ObjectTypes.Add(WorldStatic);
 	ObjectTypes.Add(WorldDynamic);
 
-	TArray<AActor*> IgnoreActors; // ¹«½ÃÇÒ ¾×ÅÍµé.
+	TArray<AActor*> IgnoreActors; // ë¬´ì‹œí•  ì•¡í„°ë“¤.
 
-	FHitResult HitResult; // È÷Æ® °á°ú °ª ¹ŞÀ» º¯¼ö.
+	FHitResult HitResult; // íˆíŠ¸ ê²°ê³¼ ê°’ ë°›ì„ ë³€ìˆ˜.
 
 	bool Result = UKismetSystemLibrary::LineTraceSingleForObjects(
 		GetWorld(),
@@ -352,7 +352,7 @@ FVector ACPP_Player::CheckTargetAtCamera()
 		EDrawDebugTrace::None,
 		HitResult,
 		true
-		// ¿©±â ¹Ø¿¡ 3°³´Â ±âº» °ªÀ¸·Î Á¦°øµÊ. ¹Ù²Ù·Á¸é ÀûÀ¸¸é µÊ.
+		// ì—¬ê¸° ë°‘ì— 3ê°œëŠ” ê¸°ë³¸ ê°’ìœ¼ë¡œ ì œê³µë¨. ë°”ê¾¸ë ¤ë©´ ì ìœ¼ë©´ ë¨.
 		//, FLinearColor::Red
 		//, FLinearColor::Green
 		//, 5.0f
@@ -437,6 +437,6 @@ void ACPP_Player::SpawnHitEffect(FHitResult& HitResult)
 			UKismetMathLibrary::MakeRotationFromAxes(HitResult.ImpactNormal, FVector::ZeroVector, FVector::ZeroVector),
 			5.0f
 		);
-		DecalComponent->SetFadeScreenSize(0.0f); // ¸Ö¸®¼­ ºÃÀ» ¶§, µ¥Ä®ÀÌ ÀÛ°Ô º¸¿©µµ º¸ÀÌ°Ô ÇÏ´Â ¼³Á¤.
+		DecalComponent->SetFadeScreenSize(0.0f); // ë©€ë¦¬ì„œ ë´¤ì„ ë•Œ, ë°ì¹¼ì´ ì‘ê²Œ ë³´ì—¬ë„ ë³´ì´ê²Œ í•˜ëŠ” ì„¤ì •.
 	}
 }

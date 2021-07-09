@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "CPP_PCM.h"
@@ -8,7 +8,7 @@
 
 ACPP_PCM::ACPP_PCM()
 {
-	// Tick ÀÌº¥Æ®¸¦ »ç¿ëÇÏ·Á¸é, µû·Î Ã¼Å©ÇØÁà¾ß ÇÔ.
+	// Tick ì´ë²¤íŠ¸ë¥¼ ì‚¬ìš©í•˜ë ¤ë©´, ë”°ë¡œ ì²´í¬í•´ì¤˜ì•¼ í•¨.
 	PrimaryActorTick.bCanEverTick = true;
 }
 

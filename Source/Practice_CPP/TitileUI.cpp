@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "TitileUI.h"
@@ -64,11 +64,11 @@ void UTitileUI::OnResponseReceived(FHttpRequestPtr Request, FHttpResponsePtr Res
 	UE_LOG(LogClass, Warning, TEXT("Response : %s"), *Response->GetContentAsString());
 	//if (Response->GetContentAsString().Equals(TEXT("SUCCESS")))
 	//{
-	//	UE_LOG(LogClass, Warning, TEXT("·Î±×ÀÎ ¼º°ø!"));
+	//	UE_LOG(LogClass, Warning, TEXT("ë¡œê·¸ì¸ ì„±ê³µ!"));
 	//}
 	//else
 	//{
-	//	UE_LOG(LogClass, Warning, TEXT("·Î±×ÀÎ ½ÇÆĞ."));
+	//	UE_LOG(LogClass, Warning, TEXT("ë¡œê·¸ì¸ ì‹¤íŒ¨."));
 	//}
 	
 	TSharedRef<TJsonReader<TCHAR>> Reader = TJsonReaderFactory<TCHAR>::Create(Response->GetContentAsString());

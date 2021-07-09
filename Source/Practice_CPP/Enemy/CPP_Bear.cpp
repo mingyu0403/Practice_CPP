@@ -1,4 +1,4 @@
-#include "CPP_Bear.h"
+ï»¿#include "CPP_Bear.h"
 #include "CPP_BearAnim.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Perception/PawnSensingComponent.h"
@@ -110,20 +110,20 @@ void ACPP_Bear::MC_SetCurrentState_Implementation(EBearState state)
 {
 	if (CurrentState == EBearState::E_Dead) return;
 
-	// ¿©±â¼­ µ¿±âÈ­ÇÏ°í, ºí·¢º¸µå °ªÀ» ¸Å°Ü¾ß ÇÑ´Ù.
+	// ì—¬ê¸°ì„œ ë™ê¸°í™”í•˜ê³ , ë¸”ëž™ë³´ë“œ ê°’ì„ ë§¤ê²¨ì•¼ í•œë‹¤.
 	CurrentState = state;
 	if (AnimBP)
 	{
 		AnimBP->CurrentState = state;
 	}
 
-	// ¼­¹ö¿¡¸¸ ºí·¢º¸µå°¡ ÀÖ±â ¶§¹®¿¡, 
+	// ì„œë²„ì—ë§Œ ë¸”ëž™ë³´ë“œê°€ ìžˆê¸° ë•Œë¬¸ì—, 
 	UBlackboardComponent* MyBB = UAIBlueprintHelperLibrary::GetBlackboard(this);
-	if (MyBB == nullptr) return; // Å¬¶óÀÌ¾ðÆ®µéÀº ¿©±â¼­ retrunÀÌ µÈ´Ù.
+	if (MyBB == nullptr) return; // í´ë¼ì´ì–¸íŠ¸ë“¤ì€ ì—¬ê¸°ì„œ retrunì´ ëœë‹¤.
 
 	MyBB->SetValueAsEnum(FName("CurrentState"), (uint8)state);
 
-	// ±×³É ÀÌ·¸°Ô Â¥¸é µÉµí.
+	// ê·¸ëƒ¥ ì´ë ‡ê²Œ ì§œë©´ ë ë“¯.
 	//if (MyBB)
 	//{
 	//	MyBB->SetValueAsEnum(FName("CurrentState"), (uint8)state);

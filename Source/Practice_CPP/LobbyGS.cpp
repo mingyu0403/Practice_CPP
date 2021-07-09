@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "LobbyGS.h"
@@ -22,8 +22,8 @@ bool ALobbyGS::CountDown()
 void ALobbyGS::SetCountDownNum(int32 Num)
 {
 	CountDownNum = Num;
-	// ¼­¹ö°¡ ¾Æ´Ñ ´Ù¸¥ °÷¿¡¼­ È£Ãâ µÉ °¡´É¼ºÀÌ ÀÖ´Ù¸é, if (HasAuthority()) °Ë»çÇØ¾ß ÇÔ.
-	OnRep_CountDownNum(); // ReplicateÇÒ ¶§, Á¤ÀÛ ÀÚ½ÅÀº ÀÌº¥Æ®¸¦ ¸ø ¹ŞÀ½.ºí·çÇÁ¸°Æ®¿¡¼­´Â ÇØÁÖ´Âµ¥, C++¿¡¼­´Â °­Á¦·Î ÀÌ·¸°Ô È£ÃâÇØÁà¾ß ÇÔ.
+	// ì„œë²„ê°€ ì•„ë‹Œ ë‹¤ë¥¸ ê³³ì—ì„œ í˜¸ì¶œ ë  ê°€ëŠ¥ì„±ì´ ìˆë‹¤ë©´, if (HasAuthority()) ê²€ì‚¬í•´ì•¼ í•¨.
+	OnRep_CountDownNum(); // Replicateí•  ë•Œ, ì •ì‘ ìì‹ ì€ ì´ë²¤íŠ¸ë¥¼ ëª» ë°›ìŒ.ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œëŠ” í•´ì£¼ëŠ”ë°, C++ì—ì„œëŠ” ê°•ì œë¡œ ì´ë ‡ê²Œ í˜¸ì¶œí•´ì¤˜ì•¼ í•¨.
 }
 
 void ALobbyGS::SetCurrentPlayerCounts(int32 Counts)

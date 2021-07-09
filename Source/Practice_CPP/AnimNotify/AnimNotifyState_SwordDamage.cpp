@@ -1,4 +1,4 @@
-#include "AnimNotifyState_SwordDamage.h"
+ï»¿#include "AnimNotifyState_SwordDamage.h"
 
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -8,7 +8,7 @@ void UAnimNotifyState_SwordDamage::NotifyBegin(USkeletalMeshComponent* MeshComp,
 	Super::NotifyBegin(MeshComp, Animation, TotalDuration);
 
 	IgnoreActor.Empty();
-	IgnoreActor.Add(MeshComp->GetOwner()); // ÀÚ½Å ¹«½Ã.
+	IgnoreActor.Add(MeshComp->GetOwner()); // ìì‹  ë¬´ì‹œ.
 }
 
 void UAnimNotifyState_SwordDamage::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime)
